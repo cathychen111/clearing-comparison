@@ -1,0 +1,289 @@
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); }
+.wrap { padding: 1rem 0; overflow-x: auto; }
+.title { font-size: 15px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+.sub { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 16px; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; min-width: 820px; table-layout: fixed; }
+colgroup col:first-child { width: 148px; }
+colgroup col { width: 112px; }
+thead th { background: var(--color-background-secondary); color: var(--color-text-primary); font-weight: 500; font-size: 11px; padding: 8px 6px; text-align: left; border-bottom: 1px solid var(--color-border-secondary); position: sticky; top: 0; }
+thead th:first-child { border-radius: var(--border-radius-md) 0 0 0; }
+thead th:last-child { border-radius: 0 var(--border-radius-md) 0 0; }
+thead .firm { font-size: 12px; font-weight: 500; }
+thead .parent { font-size: 10px; color: var(--color-text-secondary); font-weight: 400; margin-top: 2px; }
+.section-header td { background: var(--color-background-tertiary); font-size: 10px; font-weight: 500; color: var(--color-text-secondary); padding: 5px 6px; letter-spacing: 0.04em; text-transform: uppercase; border-top: 0.5px solid var(--color-border-tertiary); }
+tr td { padding: 7px 6px; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-primary); vertical-align: top; line-height: 1.4; }
+tr:hover td { background: var(--color-background-secondary); }
+td.metric { color: var(--color-text-secondary); font-size: 11px; }
+td.val { font-size: 12px; font-variant-numeric: tabular-nums; }
+td.val.bold { font-weight: 500; }
+.ok { color: #1D9E75; }
+.warn { color: #BA7517; }
+.bad { color: #C0392B; }
+.na { color: var(--color-text-tertiary); font-style: italic; }
+.badge { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 4px; font-weight: 500; }
+.badge-ok { background: #E1F5EE; color: #0F6E56; }
+.badge-warn { background: #FAEEDA; color: #854F0B; }
+.badge-bad { background: #FCEBEB; color: #A32D2D; }
+.badge-info { background: #E6F1FB; color: #185FA5; }
+.badge-gray { background: var(--color-background-secondary); color: var(--color-text-secondary); }
+.note { font-size: 10px; color: var(--color-text-tertiary); display: block; margin-top: 2px; font-style: italic; }
+</style>
+<div class="wrap">
+<p class="title">六家清算商财务对比表（最终完整版）</p>
+<p class="sub">数据来源：各经纪商实体最新公开报告（审计年报 X-17A-5 或月度 FOCUS）&nbsp;·&nbsp; 截至 2026年6月5日</p>
+<table>
+<colgroup><col><col><col><col><col><col><col></colgroup>
+<thead>
+<tr>
+  <th>指标 / Metric</th>
+  <th><div class="firm">Tickrs Clearing LLC</div><div class="parent">Tickrs US Holdings</div></th>
+  <th><div class="firm">RQD* Clearing LLC</div><div class="parent">RQD* Holding Inc.</div></th>
+  <th><div class="firm">Clear Street LLC</div><div class="parent">Clear Street Holdings</div></th>
+  <th><div class="firm">Velocity Clearing LLC</div><div class="parent">VCT Holdings / 韩华人寿</div></th>
+  <th><div class="firm">IBKR LLC</div><div class="parent">IBG LLC (Nasdaq: IBKR)</div></th>
+  <th><div class="firm">BMO Capital Markets</div><div class="parent">Bank of Montreal</div></th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="section-header"><td colspan="7">基本信息 · General Information</td></tr>
+
+<tr>
+  <td class="metric">最新报告日期<br>Latest Report Date</td>
+  <td class="val"><span class="warn">⚠</span> 2025-12-31<br><span class="badge badge-warn">未审计 Unaudited</span></td>
+  <td class="val"><span class="ok">✓</span> 2025-12-31<br><span class="badge badge-ok">Baker Tilly 审计</span></td>
+  <td class="val"><span class="warn">⚠</span> 2024-12-31<br><span class="badge badge-ok">PwC 审计</span><br><span class="note">数据滞后一年</span></td>
+  <td class="val"><span class="ok">✓</span> 2026-04-30<br><span class="badge badge-ok">BDO 审计（年报）</span><br><span class="note">FOCUS 月报最新</span></td>
+  <td class="val"><span class="ok">✓</span> 2025-12-31<br><span class="badge badge-ok">Deloitte 审计</span></td>
+  <td class="val"><span class="ok">✓</span> 2025-12-31<br><span class="badge badge-ok">KPMG 审计</span></td>
+</tr>
+
+<tr>
+  <td class="metric">母公司背景<br>Parent / Background</td>
+  <td class="val"><span class="bad">私有，依赖母公司输血</span><br><span class="note">母公司半年内抽资 $4.5M</span></td>
+  <td class="val">私有<br><span class="note">业务拆分进行中（2026 Q2）</span></td>
+  <td class="val"><span class="warn">私有，IPO 2026年2月撤回</span><br><span class="note">融资计划受挫</span></td>
+  <td class="val">私有<br><span class="note">韩华人寿 2025年7月入股</span></td>
+  <td class="val bold ok">IBG LLC（Nasdaq: IBKR）<br><span class="note">S&P 500 成分股</span></td>
+  <td class="val bold ok">Bank of Montreal<br><span class="note">TSX/NYSE，1817年创立</span></td>
+</tr>
+
+<tr>
+  <td class="metric">信用评级<br>Credit Rating</td>
+  <td class="val na">未评级</td>
+  <td class="val na">未评级</td>
+  <td class="val na">未评级</td>
+  <td class="val na">未评级</td>
+  <td class="val bold"><span class="badge badge-info">A-+ (S&P，展望正面)</span></td>
+  <td class="val bold"><span class="badge badge-info">AA- 母行 (S&P，稳定)</span></td>
+</tr>
+
+<tr>
+  <td class="metric">清算模式<br>Clearing Structure</td>
+  <td class="val bad">⚠ 非自清算<br><span class="note">通过 Velocity 清算，双层对手方风险</span></td>
+  <td class="val">自清算<br><span class="note">CMTA 业务拆分至 Optimal</span></td>
+  <td class="val">自清算</td>
+  <td class="val">自清算<br><span class="note">NYSE、CBOE、Nasdaq 成员</span></td>
+  <td class="val bold ok">自清算<br><span class="note">NYSE、Nasdaq 等主要交易所</span></td>
+  <td class="val ok">自清算<br><span class="note">机构经纪商，非零售清算</span></td>
+</tr>
+
+<tr class="section-header"><td colspan="7">资产负债表 · Balance Sheet</td></tr>
+
+<tr>
+  <td class="metric">总资产<br>Total Assets</td>
+  <td class="val">$226.2 M<br><span class="note">⚠ 未审计</span></td>
+  <td class="val">$129.3 M</td>
+  <td class="val">$49.0 B<br><span class="note">2024年数据</span></td>
+  <td class="val">$7.5 B<br><span class="note">2026年4月 FOCUS</span></td>
+  <td class="val bold">$203.2 B<br><span class="note">集团合并层面</span></td>
+  <td class="val">$35.5 B</td>
+</tr>
+
+<tr>
+  <td class="metric">总负债<br>Total Liabilities</td>
+  <td class="val">$207.5 M</td>
+  <td class="val">$91.0 M</td>
+  <td class="val">$48.3 B<br><span class="note">2024年数据</span></td>
+  <td class="val">$7.3 B<br><span class="note">2026年4月 FOCUS</span></td>
+  <td class="val">~$182.8 B<br><span class="note">推算值</span></td>
+  <td class="val">$32.5 B</td>
+</tr>
+
+<tr>
+  <td class="metric">成员/股东权益<br>Members' / Stockholders' Equity</td>
+  <td class="val">$18.7 M<br><span class="note">⚠ 未审计</span></td>
+  <td class="val">$38.3 M</td>
+  <td class="val">$718.7 M<br><span class="note">2024年数据</span></td>
+  <td class="val">$152.9 M<br><span class="note">2026年4月 FOCUS</span></td>
+  <td class="val bold">$20.5 B<br><span class="note">集团合并层面</span></td>
+  <td class="val">$3.0 B<br><span class="note">经纪商实体层面</span></td>
+</tr>
+
+<tr>
+  <td class="metric">杠杆率（负债/权益）<br>Leverage Ratio</td>
+  <td class="val">~11.1x</td>
+  <td class="val bold ok">~2.4x ✓<br><span class="note">六家中最低</span></td>
+  <td class="val warn">~67x ⚠<br><span class="note">Repo 业务驱动</span></td>
+  <td class="val warn">~48x ⚠<br><span class="note">Repo 一年暴增 4,000%</span></td>
+  <td class="val ok">~9x</td>
+  <td class="val ok">~10.8x</td>
+</tr>
+
+<tr class="section-header"><td colspan="7">净资本合规（SEC Rule 15c3-1）· Net Capital Compliance</td></tr>
+
+<tr>
+  <td class="metric">净资本<br>Net Capital</td>
+  <td class="val warn">$18.5 M<br><span class="badge badge-warn">未审计</span></td>
+  <td class="val ok bold">$36.2 M ✓</td>
+  <td class="val bad">未公开披露 ⚠<br><span class="note">六家中唯一不披露</span></td>
+  <td class="val ok">$131.4 M ✓<br><span class="note">2026年4月 FOCUS</span></td>
+  <td class="val bold">$10.6 B</td>
+  <td class="val">$743 M<br><span class="note">2024年末数据</span></td>
+</tr>
+
+<tr>
+  <td class="metric">超额净资本<br>Excess Net Capital</td>
+  <td class="val warn">$14.2 M<br><span class="badge badge-warn">未审计</span></td>
+  <td class="val ok">$35.7 M ✓</td>
+  <td class="val bad">未公开披露 ⚠</td>
+  <td class="val ok">$122.5 M ✓<br><span class="note">2026年4月 FOCUS</span></td>
+  <td class="val bold">$8.8 B</td>
+  <td class="val">$593 M<br><span class="note">2024年末数据</span></td>
+</tr>
+
+<tr>
+  <td class="metric">监管最低净资本要求<br>Required Net Capital</td>
+  <td class="val">$4.3 M</td>
+  <td class="val ok">$463,598<br><span class="note">超额比率最高</span></td>
+  <td class="val na">未披露</td>
+  <td class="val">$8.9 M</td>
+  <td class="val">$1.8 B</td>
+  <td class="val">~$150 M</td>
+</tr>
+
+<tr class="section-header"><td colspan="7">客户资产保护 · Customer Asset Protection</td></tr>
+
+<tr>
+  <td class="metric">现金<br>Cash</td>
+  <td class="val">$6.3 M</td>
+  <td class="val">$10.0 M</td>
+  <td class="val">$209.2 M<br><span class="note">2024年数据</span></td>
+  <td class="val">$90.4 M</td>
+  <td class="val bold">~$5.1 B</td>
+  <td class="val">$28.3 M</td>
+</tr>
+
+<tr>
+  <td class="metric">客户隔离现金（15c3-3）<br>Cash Segregated</td>
+  <td class="val bad">$961 K ⚠<br><span class="note">极低，保障能力不足</span></td>
+  <td class="val">$39.3 M</td>
+  <td class="val">$183.1 M<br><span class="note">2024年数据</span></td>
+  <td class="val">$28.1 M<br><span class="note">年报 2025年末</span></td>
+  <td class="val bold">$48.8 B<br><span class="note">Q3 2025数据</span></td>
+  <td class="val na">机构业务，未单独列示</td>
+</tr>
+
+<tr>
+  <td class="metric">客户应收款（融资余额）<br>Receivables from Customers</td>
+  <td class="val warn">$214.1 M<br><span class="note">⚠ 88% 来自单一客户</span></td>
+  <td class="val warn">$17.5 M<br><span class="note">3客户占 91%</span></td>
+  <td class="val">$768.9 M<br><span class="note">2024年数据</span></td>
+  <td class="val">$198.3 M</td>
+  <td class="val bold">$77.6 B<br><span class="note">Q3 2025数据</span></td>
+  <td class="val">$223.2 M</td>
+</tr>
+
+<tr>
+  <td class="metric">客户应付款<br>Payables to Customers</td>
+  <td class="val">$338 K</td>
+  <td class="val">$44.4 M</td>
+  <td class="val">$2.5 B<br><span class="note">2024年数据</span></td>
+  <td class="val">$422.6 M</td>
+  <td class="val bold">~$149 B<br><span class="note">Q3 2025，推算</span></td>
+  <td class="val">$133.9 M</td>
+</tr>
+
+<tr>
+  <td class="metric">证券借出<br>Securities Loaned</td>
+  <td class="val">$102.0 M</td>
+  <td class="val">$33.0 M</td>
+  <td class="val">$14.8 B<br><span class="note">2024年数据</span></td>
+  <td class="val">$656.9 M</td>
+  <td class="val bold">$27.0 B</td>
+  <td class="val">$6.4 B</td>
+</tr>
+
+<tr>
+  <td class="metric">SIPC 保险<br>SIPC Coverage</td>
+  <td class="val">标准 $500K/户</td>
+  <td class="val">标准 $500K/户</td>
+  <td class="val">标准 $500K<br>+ Lloyd's 超额<br><span class="note">证券最高 $62.5M/户，总上限 $250M</span></td>
+  <td class="val">标准 $500K/户</td>
+  <td class="val">标准 $500K<br>+ 超额保险</td>
+  <td class="val">标准 $500K/户</td>
+</tr>
+
+<tr class="section-header"><td colspan="7">核心风险标注 · Key Risk Flags</td></tr>
+
+<tr>
+  <td class="metric">主要风险<br>Key Risks</td>
+  <td class="val">
+    <span class="badge badge-bad">未审计数据</span><br>
+    <span class="badge badge-bad">客户集中 88%</span><br>
+    <span class="badge badge-bad">非自清算（双层风险）</span><br>
+    <span class="badge badge-warn">母公司持续抽资</span>
+  </td>
+  <td class="val">
+    <span class="badge badge-warn">业务拆分中</span><br>
+    <span class="badge badge-warn">规模较小</span><br>
+    <span class="badge badge-ok">杠杆率最低</span>
+  </td>
+  <td class="val">
+    <span class="badge badge-bad">净资本不披露</span><br>
+    <span class="badge badge-bad">IPO 已撤回</span><br>
+    <span class="badge badge-warn">数据滞后一年</span><br>
+    <span class="badge badge-warn">杠杆偏高 67x</span>
+  </td>
+  <td class="val">
+    <span class="badge badge-warn">Repo 一年增 4,000%</span><br>
+    <span class="badge badge-ok">净资本月度公开</span><br>
+    <span class="badge badge-ok">透明度最高（中型）</span><br>
+    <span class="badge badge-ok">韩华人寿入股</span>
+  </td>
+  <td class="val">
+    <span class="badge badge-ok">评级 A-+（S&P）</span><br>
+    <span class="badge badge-ok">规模最大</span><br>
+    <span class="badge badge-ok">47 年经营历史</span><br>
+    <span class="badge badge-warn">LLC 层面部分数据推算</span>
+  </td>
+  <td class="val">
+    <span class="badge badge-ok">母行 AA-（S&P）</span><br>
+    <span class="badge badge-ok">历史悠久</span><br>
+    <span class="badge badge-info">机构导向，需确认准入</span><br>
+    <span class="badge badge-warn">净资本为 2024年末数据</span>
+  </td>
+</tr>
+
+<tr class="section-header"><td colspan="7">综合排名（资产安全性）· Overall Ranking</td></tr>
+
+<tr>
+  <td class="metric">排名 / Ranking</td>
+  <td class="val bad bold">#6<br><span class="note">不建议作为主清算商</span></td>
+  <td class="val warn bold">#5<br><span class="note">业务拆分完成后再评估</span></td>
+  <td class="val warn bold">#3<br><span class="note">须要求披露净资本</span></td>
+  <td class="val warn bold">#4<br><span class="note">中型中透明度最高</span></td>
+  <td class="val ok bold">#1<br><span class="note">各项指标最优</span></td>
+  <td class="val ok bold">#2<br><span class="note">母行背书强，需确认准入</span></td>
+</tr>
+
+</tbody>
+</table>
+<p style="font-size:10px; color:var(--color-text-tertiary); margin-top:10px; line-height:1.6;">
+  ✓ 已审计或合规 &nbsp;|&nbsp; ⚠ 需关注 &nbsp;|&nbsp; ~ 推算值，非报表直读 &nbsp;|&nbsp; 
+  IBKR 总资产/权益为集团合并层面；客户隔离现金、客户应收款为 Q3 2025 数据 &nbsp;|&nbsp; 
+  BMO 净资本为 2024年末数据 &nbsp;|&nbsp; Clear Street 净资本从未公开披露
+</p>
+</div>
